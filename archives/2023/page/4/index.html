@@ -1,0 +1,199 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>2023 | 39 blog</title><meta name="author" content="39"><meta name="copyright" content="39"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="39博客一个专业的免费源码资源互联网分享平台和记录站长个人日记，分享有用知识定期分享技术教程以及网络资源">
+<meta property="og:type" content="website">
+<meta property="og:title" content="2023">
+<meta property="og:url" content="https://39.ci/archives/2023/page/4/index.html">
+<meta property="og:site_name" content="39 blog">
+<meta property="og:description" content="39博客一个专业的免费源码资源互联网分享平台和记录站长个人日记，分享有用知识定期分享技术教程以及网络资源">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2023/05/27/429d2e2dc9ca441d.webp">
+<meta property="article:author" content="39">
+<meta property="article:tag" content="39博客, 39 blog, 技术博客, 资源网, 个人博客网站">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s3.bmp.ovh/imgs/2023/05/27/429d2e2dc9ca441d.webp"><link rel="shortcut icon" href="/image/logo.jpg"><link rel="canonical" href="https://39.ci/archives/2023/page/4/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.0.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        if (name && globalFn[key][name]) return
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.12.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '2023',
+  isPost: false,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2024-10-14 07:36:21'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://s3.bmp.ovh/imgs/2023/05/27/429d2e2dc9ca441d.webp" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">45</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">137</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">34</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-home-page" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">39 blog</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="page-site-info"><h1 id="site-title">2023</h1></div></header><main class="layout" id="content-inner"><div id="archive"><div class="article-sort-title">全部文章 - 39</div><div class="article-sort"><div class="article-sort-item year">2023</div><div class="article-sort-item"><a class="article-sort-item-img" href="/2023/06/15/116/" title="安卓阅读app_3.23.061416-免费开源阅读软件"><img src="https://s3.bmp.ovh/imgs/2023/06/15/cac0bbc12c53b6f3.png" alt="安卓阅读app_3.23.061416-免费开源阅读软件" onerror="this.onerror=null;this.src='/img/404.jpg'"></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2023-06-14T21:01:00.000Z" title="发表于 2023-06-15 05:01:00">2023-06-15</time></div><a class="article-sort-item-title" href="/2023/06/15/116/" title="安卓阅读app_3.23.061416-免费开源阅读软件">安卓阅读app_3.23.061416-免费开源阅读软件</a></div></div><div class="article-sort-item"><a class="article-sort-item-img" href="/2023/06/13/115/" title="Ubuntu常用命令"><img src="https://39.ci/image/uploads/2023/06/1689250612-en-ubuntu-logo-150x150.webp" alt="Ubuntu常用命令" onerror="this.onerror=null;this.src='/img/404.jpg'"></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2023-06-13T15:11:00.000Z" title="发表于 2023-06-13 23:11:00">2023-06-13</time></div><a class="article-sort-item-title" href="/2023/06/13/115/" title="Ubuntu常用命令">Ubuntu常用命令</a></div></div><div class="article-sort-item"><a class="article-sort-item-img" href="/2023/06/13/114/" title="1Pane新一代现代化、开源的 Linux 服务器运维管理面板"><img src="https://39.ci/image/uploads/2023/06/1689179810-1panel-logo-150x150.webp" alt="1Pane新一代现代化、开源的 Linux 服务器运维管理面板" onerror="this.onerror=null;this.src='/img/404.jpg'"></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2023-06-13T15:08:23.000Z" title="发表于 2023-06-13 23:08:23">2023-06-13</time></div><a class="article-sort-item-title" href="/2023/06/13/114/" title="1Pane新一代现代化、开源的 Linux 服务器运维管理面板">1Pane新一代现代化、开源的 Linux 服务器运维管理面板</a></div></div><div class="article-sort-item"><a class="article-sort-item-img" href="/2023/06/13/100/" title="国外免费空间推荐-infinityfree"><img src="https://39.ci/image/uploads/2023/06/1689252934-infinityfree-logo.webp" alt="国外免费空间推荐-infinityfree" onerror="this.onerror=null;this.src='/img/404.jpg'"></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2023-06-13T14:30:00.000Z" title="发表于 2023-06-13 22:30:00">2023-06-13</time></div><a class="article-sort-item-title" href="/2023/06/13/100/" title="国外免费空间推荐-infinityfree">国外免费空间推荐-infinityfree</a></div></div><div class="article-sort-item"><a class="article-sort-item-img" href="/2023/06/12/96/" title="各大搜索引擎提交地址"><img src="https://39.ci/image/uploads/2023/06/1689252805-2021091517533597.webp" alt="各大搜索引擎提交地址" onerror="this.onerror=null;this.src='/img/404.jpg'"></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2023-06-12T15:35:17.000Z" title="发表于 2023-06-12 23:35:17">2023-06-12</time></div><a class="article-sort-item-title" href="/2023/06/12/96/" title="各大搜索引擎提交地址">各大搜索引擎提交地址</a></div></div><div class="article-sort-item"><a class="article-sort-item-img" href="/2023/06/12/94/" title="一句代码开启Typecho开启Gzip方法"><img src="https://39.ci/image/uploads/2023/06/1689252873-image_from_ios-3.webp" alt="一句代码开启Typecho开启Gzip方法" onerror="this.onerror=null;this.src='/img/404.jpg'"></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2023-06-12T15:19:00.000Z" title="发表于 2023-06-12 23:19:00">2023-06-12</time></div><a class="article-sort-item-title" href="/2023/06/12/94/" title="一句代码开启Typecho开启Gzip方法">一句代码开启Typecho开启Gzip方法</a></div></div><div class="article-sort-item"><a class="article-sort-item-img" href="/2023/05/31/77/" title="Redmi k50 刷crdroid9 Android13 类原生"><img src="https://39.ci/image/uploads/2023/05/1689253250-541687_k1t0dx_4.webp" alt="Redmi k50 刷crdroid9 Android13 类原生" onerror="this.onerror=null;this.src='/img/404.jpg'"></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2023-05-30T21:59:00.000Z" title="发表于 2023-05-31 05:59:00">2023-05-31</time></div><a class="article-sort-item-title" href="/2023/05/31/77/" title="Redmi k50 刷crdroid9 Android13 类原生">Redmi k50 刷crdroid9 Android13 类原生</a></div></div><div class="article-sort-item"><a class="article-sort-item-img" href="/2023/05/31/70/" title="彩虹目录列表网站程序源码v1.2下载"><img src="https://39.ci/image/uploads/2023/07/1689253829-logo.png" alt="彩虹目录列表网站程序源码v1.2下载" onerror="this.onerror=null;this.src='/img/404.jpg'"></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2023-05-30T21:47:00.000Z" title="发表于 2023-05-31 05:47:00">2023-05-31</time></div><a class="article-sort-item-title" href="/2023/05/31/70/" title="彩虹目录列表网站程序源码v1.2下载">彩虹目录列表网站程序源码v1.2下载</a></div></div><div class="article-sort-item no-article-cover"><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2023-05-28T12:46:00.000Z" title="发表于 2023-05-28 20:46:00">2023-05-28</time></div><a class="article-sort-item-title" href="/2023/05/28/47/" title="每日60s看世界新闻">每日60s看世界新闻</a></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/archives/2023/page/3/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/archives/2023/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2023/page/3/">3</a><span class="page-number current">4</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info is-center"><div class="avatar-img"><img src="https://s3.bmp.ovh/imgs/2023/05/27/429d2e2dc9ca441d.webp" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">39</div><div class="author-info-description">39博客一个专业的免费源码资源互联网分享平台和记录站长个人日记，分享有用知识定期分享技术教程以及网络资源</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">45</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">137</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">34</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/08/14/%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BFnginx%E5%BC%80%E5%90%AFbrotli%E5%8E%8B%E7%BC%A9-%E6%8F%90%E5%8D%87%E7%BD%91%E7%AB%99%E5%8A%A0%E8%BD%BD%E9%80%9F%E5%BA%A6%E6%96%B9%E6%B3%95/" title="宝塔面板Nginx开启Brotli压缩-提升网站加载速度方法"><img src="https://39.ci/image/uploads/2023/08/1691977500-th-150x150.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="宝塔面板Nginx开启Brotli压缩-提升网站加载速度方法"/></a><div class="content"><a class="title" href="/2023/08/14/%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BFnginx%E5%BC%80%E5%90%AFbrotli%E5%8E%8B%E7%BC%A9-%E6%8F%90%E5%8D%87%E7%BD%91%E7%AB%99%E5%8A%A0%E8%BD%BD%E9%80%9F%E5%BA%A6%E6%96%B9%E6%B3%95/" title="宝塔面板Nginx开启Brotli压缩-提升网站加载速度方法">宝塔面板Nginx开启Brotli压缩-提升网站加载速度方法</a><time datetime="2023-08-14T01:45:08.000Z" title="发表于 2023-08-14 09:45:08">2023-08-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/14/%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%ADvpc%E4%B8%93%E6%9C%89%E7%BD%91%E7%BB%9C%E6%8C%87%E7%9A%84%E6%98%AF%E4%BB%80%E4%B9%88%E6%84%8F%E6%80%9D%EF%BC%9F/" title="服务器中VPC专有网络指的是什么意思？">服务器中VPC专有网络指的是什么意思？</a><time datetime="2023-08-14T01:42:06.000Z" title="发表于 2023-08-14 09:42:06">2023-08-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/14/get%E5%92%8Cpost%E7%9A%84%E5%8C%BA%E5%88%AB/" title="GET和POST的区别">GET和POST的区别</a><time datetime="2023-08-14T01:40:55.000Z" title="发表于 2023-08-14 09:40:55">2023-08-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/08/14/%E5%88%86%E4%BA%ABlinux%E6%94%B6%E9%9B%86%E7%9A%84%E4%B8%80%E4%BA%9B%E8%87%AA%E7%94%A8%E4%B8%80%E9%94%AE%E8%84%9A%E6%9C%AC/" title="分享Linux收集的一些自用一键脚本"><img src="https://39.ci/image/uploads/2023/08/1691977147-th-150x150.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="分享Linux收集的一些自用一键脚本"/></a><div class="content"><a class="title" href="/2023/08/14/%E5%88%86%E4%BA%ABlinux%E6%94%B6%E9%9B%86%E7%9A%84%E4%B8%80%E4%BA%9B%E8%87%AA%E7%94%A8%E4%B8%80%E9%94%AE%E8%84%9A%E6%9C%AC/" title="分享Linux收集的一些自用一键脚本">分享Linux收集的一些自用一键脚本</a><time datetime="2023-08-14T01:39:12.000Z" title="发表于 2023-08-14 09:39:12">2023-08-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/14/%E5%A2%9E%E5%BC%BA-tls-%E5%AE%89%E5%85%A8%E6%80%A7%EF%BC%9A%E8%B0%B7%E6%AD%8C%E5%9C%A8-chrome-116-%E4%B8%AD%E6%B7%BB%E5%8A%A0%E6%8A%97%E9%87%8F%E5%AD%90%E5%8A%A0%E5%AF%86/" title="增强 TLS 安全性：谷歌在 Chrome 116 中添加抗量子加密">增强 TLS 安全性：谷歌在 Chrome 116 中添加抗量子加密</a><time datetime="2023-08-14T01:32:46.000Z" title="发表于 2023-08-14 09:32:46">2023-08-14</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            <a class="card-more-btn" href="/categories/" title="查看更多">
+      <i class="fas fa-angle-right"></i></a>
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Android/"><span class="card-category-list-name">Android</span><span class="card-category-list-count">14</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Linux/"><span class="card-category-list-name">Linux</span><span class="card-category-list-count">5</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Windows/"><span class="card-category-list-name">Windows</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/android/"><span class="card-category-list-name">android</span><span class="card-category-list-count">14</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/android/MIUI%E4%BF%AE%E6%94%B9/"><span class="card-category-list-name">MIUI修改</span><span class="card-category-list-count">8</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/android/MIUI%E4%BF%AE%E6%94%B9/%E7%B3%BB%E7%BB%9F%E7%9B%B8%E5%85%B3/"><span class="card-category-list-name">系统相关</span><span class="card-category-list-count">2</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/android/%E7%B3%BB%E7%BB%9F%E7%9B%B8%E5%85%B3/"><span class="card-category-list-name">系统相关</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/android/%E8%BD%AF%E4%BB%B6%E7%9B%B8%E5%85%B3/"><span class="card-category-list-name">软件相关</span><span class="card-category-list-count">2</span></a></li></ul></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E5%BD%A9%E8%99%B9%E7%9B%AE%E5%BD%95%E5%88%97%E8%A1%A8/" style="font-size: 1.1em; color: #999">彩虹目录列表</a> <a href="/tags/%E5%9B%BA%E6%80%81%E7%A1%AC%E7%9B%98/" style="font-size: 1.1em; color: #999">固态硬盘</a> <a href="/tags/%E5%B0%8F%E7%B1%B3%E6%89%8B%E7%8E%AF7/" style="font-size: 1.1em; color: #999">小米手环7</a> <a href="/tags/Typecho%E6%8F%92%E4%BB%B6/" style="font-size: 1.1em; color: #999">Typecho插件</a> <a href="/tags/%E4%B8%8D%E5%8F%97%E4%BF%A1%E4%BB%BB%E7%9A%84%E8%A7%A6%E6%91%B8%E4%BA%8B%E4%BB%B6/" style="font-size: 1.1em; color: #999">不受信任的触摸事件</a> <a href="/tags/%E5%B0%8F%E7%B1%B3%E5%B9%B3%E6%9D%BF1%E5%88%B7%E6%9C%BA%E6%95%99%E7%A8%8B/" style="font-size: 1.1em; color: #999">小米平板1刷机教程</a> <a href="/tags/Gzip/" style="font-size: 1.1em; color: #999">Gzip</a> <a href="/tags/%E5%A4%96%E9%93%BE/" style="font-size: 1.1em; color: #999">外链</a> <a href="/tags/%E5%88%9D%E9%9F%B3%E6%9C%AA%E6%9D%A5/" style="font-size: 1.5em; color: #99a9bf">初音未来</a> <a href="/tags/%E5%8F%B0%E7%94%B5/" style="font-size: 1.1em; color: #999">台电</a> <a href="/tags/Redmi-k50%E5%88%B7Android13/" style="font-size: 1.1em; color: #999">Redmi k50刷Android13</a> <a href="/tags/Redmi-k50%E5%88%B7crdroid/" style="font-size: 1.1em; color: #999">Redmi k50刷crdroid</a> <a href="/tags/%E9%93%A0%E4%BE%A0u%E7%9B%98/" style="font-size: 1.1em; color: #999">铠侠u盘</a> <a href="/tags/InfinityFree%E6%95%99%E7%A8%8B/" style="font-size: 1.1em; color: #999">InfinityFree教程</a> <a href="/tags/%E5%BC%80%E6%BA%90%E9%9D%A2%E6%9D%BF/" style="font-size: 1.1em; color: #999">开源面板</a> <a href="/tags/Android%E5%8F%8D%E7%BC%96%E8%AF%91/" style="font-size: 1.3em; color: #99a1ac">Android反编译</a> <a href="/tags/%E9%80%86%E5%90%91/" style="font-size: 1.1em; color: #999">逆向</a> <a href="/tags/WordPress%E4%B8%BB%E9%A2%98%E6%8E%A8%E8%8D%90-iFalse/" style="font-size: 1.1em; color: #999">WordPress主题推荐 - iFalse</a> <a href="/tags/%E7%BA%A2%E7%B1%B3k50/" style="font-size: 1.1em; color: #999">红米k50</a> <a href="/tags/%E5%BD%A9%E8%99%B9/" style="font-size: 1.1em; color: #999">彩虹</a> <a href="/tags/u%E7%9B%98%E8%AF%84%E6%B5%8B/" style="font-size: 1.1em; color: #999">u盘评测</a> <a href="/tags/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/" style="font-size: 1.1em; color: #999">搜索引擎</a> <a href="/tags/%E5%85%8D%E8%B4%B9PHP%E8%99%9A%E6%8B%9F%E4%B8%BB%E6%9C%BA/" style="font-size: 1.1em; color: #999">免费PHP虚拟主机</a> <a href="/tags/%E6%A8%AA%E5%9B%BE/" style="font-size: 1.1em; color: #999">横图</a> <a href="/tags/Android%E9%80%86%E5%90%91/" style="font-size: 1.5em; color: #99a9bf">Android逆向</a> <a href="/tags/%E4%BC%98%E5%8C%96/" style="font-size: 1.1em; color: #999">优化</a> <a href="/tags/SM2258H/" style="font-size: 1.1em; color: #999">SM2258H</a> <a href="/tags/%E9%87%8F%E4%BA%A7/" style="font-size: 1.5em; color: #99a9bf">量产</a> <a href="/tags/seo/" style="font-size: 1.1em; color: #999">seo</a> <a href="/tags/Typecho/" style="font-size: 1.1em; color: #999">Typecho</a> <a href="/tags/%E7%B1%B3%E6%B8%B8%E7%A4%BE%E4%B8%8B%E8%BD%BD%E9%99%90%E5%88%B6%E5%88%86%E6%9E%90/" style="font-size: 1.1em; color: #999">米游社下载限制分析</a> <a href="/tags/crdroid9-4/" style="font-size: 1.1em; color: #999">crdroid9.4</a> <a href="/tags/Typecho%E7%BC%93%E5%AD%98/" style="font-size: 1.1em; color: #999">Typecho缓存</a> <a href="/tags/Typecho%E5%AD%97%E4%BD%93%E7%BE%8E%E5%8C%96/" style="font-size: 1.1em; color: #999">Typecho字体美化</a> <a href="/tags/Windows-10/" style="font-size: 1.1em; color: #999">Windows 10</a> <a href="/tags/%E5%B0%8F%E8%80%B3%E6%9C%B5%E7%94%B5%E6%BA%90/" style="font-size: 1.1em; color: #999">小耳朵电源</a> <a href="/tags/Typecho%E5%AD%97%E4%BD%93%E6%8F%92%E4%BB%B6/" style="font-size: 1.1em; color: #999">Typecho字体插件</a> <a href="/tags/%E5%8E%BB%E9%99%A4MIUI%E5%BA%94%E7%94%A8%E5%95%86%E5%BA%97%E6%9B%B4%E6%96%B0/" style="font-size: 1.1em; color: #999">去除MIUI应用商店更新</a> <a href="/tags/miui%E6%A1%8C%E9%9D%A2%E4%BF%AE%E6%94%B9/" style="font-size: 1.1em; color: #999">miui桌面修改</a> <a href="/tags/%E5%B0%8F%E7%B1%B3%E6%89%8B%E7%8E%AF7%E6%8D%A2%E7%AC%AC%E4%B8%89%E6%96%B9%E8%A1%A8%E7%9B%98/" style="font-size: 1.1em; color: #999">小米手环7换第三方表盘</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
+    </div>
+    <ul class="card-archive-list">
+  
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2023/08/">
+          <span class="card-archive-list-date">八月 2023</span>
+          <span class="card-archive-list-count">9</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2023/07/">
+          <span class="card-archive-list-date">七月 2023</span>
+          <span class="card-archive-list-count">15</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2023/06/">
+          <span class="card-archive-list-date">六月 2023</span>
+          <span class="card-archive-list-count">12</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2023/05/">
+          <span class="card-archive-list-date">五月 2023</span>
+          <span class="card-archive-list-count">3</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2022/11/">
+          <span class="card-archive-list-date">十一月 2022</span>
+          <span class="card-archive-list-count">6</span>
+        </a>
+      </li>
+    </ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">45</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-10-13T23:36:20.729Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By 39</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.0.0"></script><script src="/js/main.js?v=5.0.0"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

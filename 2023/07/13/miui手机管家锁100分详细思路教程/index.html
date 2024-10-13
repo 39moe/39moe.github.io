@@ -1,0 +1,189 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>MIUI手机管家锁100分详细思路+教程 | 39 blog</title><meta name="author" content="39"><meta name="copyright" content="39"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="先说教程：以手机管家7.7.5版本为例，点按mt管理器并查看  点右下角的“查看” 点击其中一个dex，选择dex++编辑器，全部勾选进入  ツ 然后选择搜索，搜索“getMinusPredictScore”类型为字符串  接着，不出意外的话应该只有一个结果，点开  代码大概长这样  接着点开最上面的指南针，长按目前高亮的选项，在弹出的菜单中点“清空代码”    大功告成，然后一路返回保存代码回编">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MIUI手机管家锁100分详细思路+教程">
+<meta property="og:url" content="https://39.ci/2023/07/13/miui%E6%89%8B%E6%9C%BA%E7%AE%A1%E5%AE%B6%E9%94%81100%E5%88%86%E8%AF%A6%E7%BB%86%E6%80%9D%E8%B7%AF%E6%95%99%E7%A8%8B/index.html">
+<meta property="og:site_name" content="39 blog">
+<meta property="og:description" content="先说教程：以手机管家7.7.5版本为例，点按mt管理器并查看  点右下角的“查看” 点击其中一个dex，选择dex++编辑器，全部勾选进入  ツ 然后选择搜索，搜索“getMinusPredictScore”类型为字符串  接着，不出意外的话应该只有一个结果，点开  代码大概长这样  接着点开最上面的指南针，长按目前高亮的选项，在弹出的菜单中点“清空代码”    大功告成，然后一路返回保存代码回编">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://39.ci/image/uploads/2023/07/1689243368-2919503_2a0d3b08_7899_5685_66@1080x486-1-150x150.webp">
+<meta property="article:published_time" content="2023-07-13T10:13:15.000Z">
+<meta property="article:modified_time" content="2024-10-13T08:19:53.835Z">
+<meta property="article:author" content="39">
+<meta property="article:tag" content="ProjectTreble">
+<meta property="article:tag" content="MIUI手机管家">
+<meta property="article:tag" content="手机管家锁100分">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://39.ci/image/uploads/2023/07/1689243368-2919503_2a0d3b08_7899_5685_66@1080x486-1-150x150.webp"><link rel="shortcut icon" href="/image/logo.jpg"><link rel="canonical" href="https://39.ci/2023/07/13/miui%E6%89%8B%E6%9C%BA%E7%AE%A1%E5%AE%B6%E9%94%81100%E5%88%86%E8%AF%A6%E7%BB%86%E6%80%9D%E8%B7%AF%E6%95%99%E7%A8%8B/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.0.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        if (name && globalFn[key][name]) return
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.12.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'MIUI手机管家锁100分详细思路+教程',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-10-13 16:19:53'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://s3.bmp.ovh/imgs/2023/05/27/429d2e2dc9ca441d.webp" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">45</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">137</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">34</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://39.ci/image/uploads/2023/07/1689243368-2919503_2a0d3b08_7899_5685_66@1080x486-1-150x150.webp);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">39 blog</span></a><a class="nav-page-title" href="/"><span class="site-name">MIUI手机管家锁100分详细思路+教程</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">MIUI手机管家锁100分详细思路+教程</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-07-13T10:13:15.000Z" title="发表于 2023-07-13 18:13:15">2023-07-13</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-10-13T08:19:53.835Z" title="更新于 2024-10-13 16:19:53">2024-10-13</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Android/">Android</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/android/">android</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/android/%E7%B3%BB%E7%BB%9F%E7%9B%B8%E5%85%B3/">系统相关</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="先说教程："><a href="#先说教程：" class="headerlink" title="先说教程："></a>先说教程：</h2><p>以手机管家7.7.5版本为例，点按mt管理器并查看</p>
+<p><img src="https://39.ci/image/uploads/2023/07/1689242328-2919503_ef88407f_7900_8224_469@1075x1201.jpeg.m.webp"></p>
+<p>点右下角的“查看”</p>
+<p>点击其中一个dex，选择dex++编辑器，全部勾选进入</p>
+<p><img src="https://39.ci/image/uploads/2023/07/1689242316-2919503_8ce4c1fa_7900_8231_6@1080x797.jpeg.m.webp"></p>
+<p>ツ</p>
+<p>然后选择搜索，搜索“getMinusPredictScore”<br>类型为字符串</p>
+<p><img src="https://39.ci/image/uploads/2023/07/1689242322-2919503_a6a28961_7900_8235_250@1080x1822.jpeg.m-607x1024.webp"></p>
+<p>接着，不出意外的话应该只有一个结果，点开</p>
+<p><img src="https://39.ci/image/uploads/2023/07/1689242318-2919503_31db98a2_7900_8238_752@1080x434.jpeg.m.webp"></p>
+<p>代码大概长这样</p>
+<p><img src="https://39.ci/image/uploads/2023/07/1689242321-2919503_411ee34b_7900_8245_350@1080x2340.jpeg.m-473x1024.webp"></p>
+<p>接着点开最上面的指南针，长按目前高亮的选项，在弹出的菜单中点“清空代码”</p>
+<p><img src="https://39.ci/image/uploads/2023/07/1689242317-2919503_26be2e8a_7900_8248_98@1080x444.jpeg.m.webp"></p>
+<p><img src="https://39.ci/image/uploads/2023/07/1689242639-2919503_2fe42900_7900_8257_576@1080x2340.jpeg.m-473x1024.webp"></p>
+<p><img src="https://39.ci/image/uploads/2023/07/1689242315-2919503_2a0daf86_7900_8259_510@1051x464.jpeg.m.webp"></p>
+<p>大功告成，然后一路返回保存代码回编译（不勾选自动签名），安装之后即可锁定100分</p>
+<p><img src="https://39.ci/image/uploads/2023/07/1689242582-2919503_0b6f768d_7900_8263_776@1080x2340.jpeg.m-473x1024.jpg"></p>
+<hr>
+<h2 id="下面开始讲思路："><a href="#下面开始讲思路：" class="headerlink" title="下面开始讲思路："></a>下面开始讲思路：</h2><p>咱们手机管家的分数为100分的时候，它下面会有一行提示“手机十分安全，请继续保持”<br>诶，我们的突破口就是在这里，我们通过搜索它的arsc获得了ID值“7F12075D”</p>
+<p><img src="https://39.ci/image/uploads/2023/07/1689242324-2919503_c99a6f13_7905_1664_676@1080x2340.jpeg.m-473x1024.webp"></p>
+<p>在dex中搜索此ID值，即可得到以下结果</p>
+<p><img src="https://39.ci/image/uploads/2023/07/1689242326-2919503_dfd9e4a2_7905_1674_336@1080x2340.jpeg.m-473x1024.webp"></p>
+<p>在这么多的结果中，只有里面找到的代码中包含归属于scanner中的类才是我们想要的（这里参考还没被混淆的时候的手机管家，谢谢现在已经面目全非了</p>
+<p><img src="http://static.coolapk.com/emoticons/v9/coolapk_emotion_105_tnaikezui.png" alt="t耐克嘴"></p>
+<p>）<br>在最后一个结果中，我们找到了有关这一类的引用<br>p方法会返回一个int类型的值</p>
+<p><img src="https://39.ci/image/uploads/2023/07/1689242323-2919503_bf1882a0_7905_1685_301@1080x1504.jpeg.m.webp"></p>
+<p>看不懂？我们转成Java代码试试吧</p>
+<p><img src="https://39.ci/image/uploads/2023/07/1689242317-2919503_013d48db_7905_1689_101@1080x985.jpeg.m.webp"></p>
+<p>在这个p方法中，它引用了ScoreManager的n方法，传入空参并定义了int类型的n变量把n()计算的结果赋值给我们的n变量<br>接下来有趣了，它最后是返回了100-n作为这个方法传出的int值<br>那么，我们可以将ScoreManager类中的那个n方法传出的值变为0，前面的判断都无法走过，直接跳转到最后一行，最终返回的结果100-n，即是100-0，也就是依旧是100（分），我们的目的达成<br>跳转到ScoreManager类中的n方法，我们神奇地到达了前面教程的地方</p>
+<p><img src="https://39.ci/image/uploads/2023/07/1689242319-2919503_74ca7612_7905_1696_37@1080x2340.jpeg.m-473x1024.webp" alt="是不是很熟悉？"></p>
+<p>假使我们转成Java代码，你就会发现getMinusPredictScore这一段字符串其实是程序员编写的log测试代码<br>之所以要让你们通过搜索字符串getMinusPredictScore来定位<br>是因为log是不容易被混淆的，这样可以解决教程因版本迭代而失效的问题</p>
+<p><img src="https://39.ci/image/uploads/2023/07/1689242330-2919503_fa0fad86_7905_1706_708@1080x785.jpeg.m.webp"></p>
+<p>然后我们清空代码，这样就能够实现传出的int值为0啦~</p>
+<p><img src="https://39.ci/image/uploads/2023/07/1689242315-2919503_2a0daf86_7900_8259_510@1051x464.jpeg.m.webp" alt="return 0"></p>
+<p>版权声明：转载自<a target="_blank" rel="noopener" href="https://www.coolapk.com/feed/43756327?shareKey=NGE2ODEwMDk4ZDA4NjRhZmZhNDU~&shareUid=995327&shareFrom=com.coolapk.market_13.3">酷安@Qe_xr</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://39.ci">39</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://39.ci/2023/07/13/miui%E6%89%8B%E6%9C%BA%E7%AE%A1%E5%AE%B6%E9%94%81100%E5%88%86%E8%AF%A6%E7%BB%86%E6%80%9D%E8%B7%AF%E6%95%99%E7%A8%8B/">https://39.ci/2023/07/13/miui%E6%89%8B%E6%9C%BA%E7%AE%A1%E5%AE%B6%E9%94%81100%E5%88%86%E8%AF%A6%E7%BB%86%E6%80%9D%E8%B7%AF%E6%95%99%E7%A8%8B/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://39.ci" target="_blank">39 blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/ProjectTreble/">ProjectTreble</a><a class="post-meta__tags" href="/tags/MIUI%E6%89%8B%E6%9C%BA%E7%AE%A1%E5%AE%B6/">MIUI手机管家</a><a class="post-meta__tags" href="/tags/%E6%89%8B%E6%9C%BA%E7%AE%A1%E5%AE%B6%E9%94%81100%E5%88%86/">手机管家锁100分</a></div><div class="post-share"><div class="social-share" data-image="https://39.ci/image/uploads/2023/07/1689243368-2919503_2a0d3b08_7899_5685_66@1080x486-1-150x150.webp" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.4/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.4/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="prev-post pull-left" href="/2023/07/13/%E5%8E%BB%E9%99%A4miui%E5%BA%94%E7%94%A8%E5%95%86%E5%BA%97%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0%E8%87%AA%E5%B7%B1/" title="去除MIUI应用商店自动更新自己"><img class="cover" src="https://39.ci/image/uploads/2023/07/1689256875-2015321153435-150x150.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">去除MIUI应用商店自动更新自己</div></div></a><a class="next-post pull-right" href="/2023/07/13/%E4%B8%9C%E8%8E%9E%E5%B0%8F%E8%80%B3%E6%9C%B5std-t2x-a%E7%94%B5%E6%BA%90%E6%8B%86%E8%A7%A3/" title="东莞小耳朵STD-T2X-A电源拆解"><img class="cover" src="https://39.ci/image/uploads/2023/07/1689217441-XED-150x150.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">东莞小耳朵STD-T2X-A电源拆解</div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a href="/2023/07/13/miui%E7%AE%A1%E5%AE%B6%E5%8E%BB%E9%99%A4%E6%94%AF%E4%BB%98%E6%97%B6%E7%9A%84%E9%A3%8E%E9%99%A9%E6%8F%90%E7%A4%BA/" title="MIUI管家去除支付时的风险提示"><img class="cover" src="https://39.ci/image/uploads/2023/07/1689263077-202262084627142-150x150.webp" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-13</div><div class="title">MIUI管家去除支付时的风险提示</div></div></a><a href="/2023/07/13/android%E5%90%AF%E7%94%A8%E4%B8%8D%E5%8F%97%E4%BF%A1%E4%BB%BB%E7%9A%84%E8%A7%A6%E6%91%B8%E4%BA%8B%E4%BB%B6/" title="Android启用不受信任的触摸事件"><img class="cover" src="https://39.ci/image/uploads/2023/07/1689258329-wired-uk-android-tips-1-150x150.webp" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-13</div><div class="title">Android启用不受信任的触摸事件</div></div></a><a href="/2023/07/13/miui%E5%8E%BB%E9%99%A4%E7%9B%B8%E5%86%8C%E5%9B%BE%E7%89%87%E8%A3%81%E5%88%87%E9%99%90%E5%88%B6%E6%95%99%E7%A8%8B%EF%BC%88%E6%96%B0-%E8%80%81%E6%96%B9%E6%B3%95%EF%BC%89/" title="MIUI去除相册图片裁切限制教程（新&#x2F;老方法）"><img class="cover" src="https://39.ci/image/uploads/2023/07/1689258640-2919503_f53d096d_4671_9017_618@1080x486-1-150x150.webp" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-13</div><div class="title">MIUI去除相册图片裁切限制教程（新&#x2F;老方法）</div></div></a><a href="/2023/07/13/miui%E6%A1%8C%E9%9D%A2%E5%8E%BB%E9%99%A4%E8%A7%A3%E9%94%81%E5%BC%B9%E5%87%BA%E5%8A%A8%E7%94%BB%EF%BC%88%E6%89%8B%E6%8A%8A%E6%89%8B%EF%BC%89/" title="MIUI桌面去除解锁弹出动画（手把手）"><img class="cover" src="https://39.ci/image/uploads/2023/07/1689257704-202110994537037-150x150.webp" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-13</div><div class="title">MIUI桌面去除解锁弹出动画（手把手）</div></div></a><a href="/2023/07/13/%E4%B8%BA%E4%BD%A0%E7%9A%84miui1213%E9%80%82%E9%85%8D%E5%A4%A7%E6%96%87%E4%BB%B6%E5%A4%B9%E5%92%8C%E5%A4%A7%E5%9B%BE%E6%A0%87/" title="为你的MIUI12~13适配大文件夹和大图标"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-13</div><div class="title">为你的MIUI12~13适配大文件夹和大图标</div></div></a><a href="/2023/07/12/%E5%8E%BB%E6%8E%89miui12%E5%AE%89%E8%A3%85%E8%BD%AF%E4%BB%B6%E6%8F%90%E7%A4%BA%E8%AF%B7%E6%8F%92%E5%85%A5sim%E5%8D%A1%E5%90%8E%E5%86%8D%E8%AF%95/" title="去掉MIUI12安装软件提示请插入SIM卡后再试"><img class="cover" src="https://39.ci/image/uploads/2023/07/1689137224-OIP-C-150x150.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-12</div><div class="title">去掉MIUI12安装软件提示请插入SIM卡后再试</div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info is-center"><div class="avatar-img"><img src="https://s3.bmp.ovh/imgs/2023/05/27/429d2e2dc9ca441d.webp" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">39</div><div class="author-info-description">39博客一个专业的免费源码资源互联网分享平台和记录站长个人日记，分享有用知识定期分享技术教程以及网络资源</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">45</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">137</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">34</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%88%E8%AF%B4%E6%95%99%E7%A8%8B%EF%BC%9A"><span class="toc-number">1.</span> <span class="toc-text">先说教程：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E9%9D%A2%E5%BC%80%E5%A7%8B%E8%AE%B2%E6%80%9D%E8%B7%AF%EF%BC%9A"><span class="toc-number">2.</span> <span class="toc-text">下面开始讲思路：</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/08/14/%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BFnginx%E5%BC%80%E5%90%AFbrotli%E5%8E%8B%E7%BC%A9-%E6%8F%90%E5%8D%87%E7%BD%91%E7%AB%99%E5%8A%A0%E8%BD%BD%E9%80%9F%E5%BA%A6%E6%96%B9%E6%B3%95/" title="宝塔面板Nginx开启Brotli压缩-提升网站加载速度方法"><img src="https://39.ci/image/uploads/2023/08/1691977500-th-150x150.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="宝塔面板Nginx开启Brotli压缩-提升网站加载速度方法"/></a><div class="content"><a class="title" href="/2023/08/14/%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BFnginx%E5%BC%80%E5%90%AFbrotli%E5%8E%8B%E7%BC%A9-%E6%8F%90%E5%8D%87%E7%BD%91%E7%AB%99%E5%8A%A0%E8%BD%BD%E9%80%9F%E5%BA%A6%E6%96%B9%E6%B3%95/" title="宝塔面板Nginx开启Brotli压缩-提升网站加载速度方法">宝塔面板Nginx开启Brotli压缩-提升网站加载速度方法</a><time datetime="2023-08-14T01:45:08.000Z" title="发表于 2023-08-14 09:45:08">2023-08-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/14/%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%ADvpc%E4%B8%93%E6%9C%89%E7%BD%91%E7%BB%9C%E6%8C%87%E7%9A%84%E6%98%AF%E4%BB%80%E4%B9%88%E6%84%8F%E6%80%9D%EF%BC%9F/" title="服务器中VPC专有网络指的是什么意思？">服务器中VPC专有网络指的是什么意思？</a><time datetime="2023-08-14T01:42:06.000Z" title="发表于 2023-08-14 09:42:06">2023-08-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/14/get%E5%92%8Cpost%E7%9A%84%E5%8C%BA%E5%88%AB/" title="GET和POST的区别">GET和POST的区别</a><time datetime="2023-08-14T01:40:55.000Z" title="发表于 2023-08-14 09:40:55">2023-08-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/08/14/%E5%88%86%E4%BA%ABlinux%E6%94%B6%E9%9B%86%E7%9A%84%E4%B8%80%E4%BA%9B%E8%87%AA%E7%94%A8%E4%B8%80%E9%94%AE%E8%84%9A%E6%9C%AC/" title="分享Linux收集的一些自用一键脚本"><img src="https://39.ci/image/uploads/2023/08/1691977147-th-150x150.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="分享Linux收集的一些自用一键脚本"/></a><div class="content"><a class="title" href="/2023/08/14/%E5%88%86%E4%BA%ABlinux%E6%94%B6%E9%9B%86%E7%9A%84%E4%B8%80%E4%BA%9B%E8%87%AA%E7%94%A8%E4%B8%80%E9%94%AE%E8%84%9A%E6%9C%AC/" title="分享Linux收集的一些自用一键脚本">分享Linux收集的一些自用一键脚本</a><time datetime="2023-08-14T01:39:12.000Z" title="发表于 2023-08-14 09:39:12">2023-08-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/14/%E5%A2%9E%E5%BC%BA-tls-%E5%AE%89%E5%85%A8%E6%80%A7%EF%BC%9A%E8%B0%B7%E6%AD%8C%E5%9C%A8-chrome-116-%E4%B8%AD%E6%B7%BB%E5%8A%A0%E6%8A%97%E9%87%8F%E5%AD%90%E5%8A%A0%E5%AF%86/" title="增强 TLS 安全性：谷歌在 Chrome 116 中添加抗量子加密">增强 TLS 安全性：谷歌在 Chrome 116 中添加抗量子加密</a><time datetime="2023-08-14T01:32:46.000Z" title="发表于 2023-08-14 09:32:46">2023-08-14</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By 39</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.0.0"></script><script src="/js/main.js?v=5.0.0"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
